@@ -1,8 +1,7 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Code/Zone.gd" type="Script" id=1]
 [ext_resource path="res://otherRes/endZone.shader" type="Shader" id=2]
-[ext_resource path="res://Image/Ball/Astéroid.svg" type="Texture" id=3]
 [ext_resource path="res://otherRes/Fire.tres" type="Material" id=4]
 [ext_resource path="res://otherRes/fire.png" type="Texture" id=5]
 
@@ -65,13 +64,11 @@ script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
-startSize = 500
-d_to_v = 1000.0
 
 [node name="startRect" type="ColorRect" parent="."]
 show_behind_parent = true
 material = SubResource( 2 )
-margin_top = 1270.0
+margin_top = 1420.0
 margin_right = 1080.0
 margin_bottom = 1920.0
 color = Color( 0.192157, 0.192157, 0.192157, 1 )
@@ -123,7 +120,6 @@ texture = ExtResource( 5 )
 visible = false
 position = Vector2( -175.104, -179.594 )
 scale = Vector2( 0.05, 0.05 )
-texture = ExtResource( 3 )
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="Ball_Sprite"]
 remote_path = NodePath("../../Fire")

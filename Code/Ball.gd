@@ -8,6 +8,7 @@ var root:Node
 
 func _ready():
 	root = get_tree().get_root()
+	$Sprite.texture = PlayerParameters.ball_texture
 	
 func _physics_process(delta):
 	

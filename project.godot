@@ -44,6 +44,11 @@ boot_splash/fullsize=false
 boot_splash/use_filter=false
 config/icon="res://icon.png"
 
+[autoload]
+
+PlayerParameters="*res://Code/Singleton/PlayerParameters.gd"
+SceneParameters="*res://Code/Singleton/SceneParameters.gd"
+
 [display]
 
 window/size/width=1080
