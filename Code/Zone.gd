@@ -11,7 +11,7 @@ var alreadyPressed:bool = false
 var startPos:Vector2 = Vector2.ZERO
 
 const ball_scene = preload("res://Scene/Ball.tscn")
-var ball_texture:Texture = preload("res://Image//Ball//asteroid-asteroid-svgrepo-com.svg")
+var ball_texture:Texture = preload("res://Image/Ball/Astéroid.svg")
 
 export(float) var d_to_v:float = 0.0001
 

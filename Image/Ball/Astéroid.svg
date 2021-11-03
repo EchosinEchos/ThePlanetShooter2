@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="1000"
+   height="1000"
+   viewBox="0 0 264.58333 264.58334"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.1 (c68e22c387, 2021-05-23)"
+   sodipodi:docname="Astéroid.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#505050"
+     bordercolor="#eeeeee"
+     borderopacity="1"
+     inkscape:pageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="false"
+     units="px"
+     inkscape:snap-page="true"
+     inkscape:zoom="0.67081229"
+     inkscape:cx="695.42554"
+     inkscape:cy="416.65903"
+     inkscape:window-width="1920"
+     inkscape:window-height="1001"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       id="path64"
+       style="fill:#6c5d53;stroke-width:0.441588"
+       d="m 264.58334,132.29167 c 0,73.06267 -59.229,132.29167 -132.29167,132.29167 -41.084943,0 -57.872803,-45.15584 -94.42468,-50.08756 C 8.442245,210.52568 -0.26684347,164.26829 0,132.29167 0.50796927,71.420261 34.310338,39.460861 121.24785,12.621514 270.29538,-33.392439 264.58334,59.228998 264.58334,132.29167 Z"
+       sodipodi:nodetypes="ssssss"
+       clip-path="none" />
+    <ellipse
+       style="fill:#483e37;stroke-width:0.255749"
+       id="path432"
+       cx="81.053787"
+       cy="68.629478"
+       rx="45.950203"
+       ry="26.820717" />
+    <ellipse
+       style="fill:#483e37;stroke-width:0.0806219"
+       id="path432-4"
+       cx="132.92032"
+       cy="224.6235"
+       rx="9.2689276"
+       ry="13.213147" />
+    <path
+       id="path432-1"
+       style="fill:#483e37;stroke-width:0.255749"
+       d="m 251.44422,136.86455 c -1e-5,14.81267 -20.57261,26.82071 -45.9502,26.82071 -25.37759,0 14.32375,-7.98978 -45.9502,-26.82071 -14.13871,-4.41725 20.5726,-26.82072 45.9502,-26.82072 25.3776,0 45.9502,12.00805 45.9502,26.82072 z"
+       sodipodi:nodetypes="sssss" />
+  </g>
+</svg>

@@ -15,6 +15,8 @@ func _physics_process(delta):
 	v += a * delta
 	dpl += v*delta
 	
+	$Sprite.rotation = atan2(v.x, -v.y)
+	
 	var col : KinematicCollision2D = move_and_collide(dpl)
 	if col != null:
 		var gr = col.collider.get_groups()
