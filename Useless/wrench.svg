@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.1 (c68e22c387, 2021-05-23)"
+   sodipodi:docname="wrench.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#505050"
+     bordercolor="#eeeeee"
+     borderopacity="1"
+     inkscape:pageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:snap-object-midpoints="false"
+     inkscape:snap-intersection-paths="false"
+     inkscape:object-paths="false"
+     inkscape:snap-midpoints="true"
+     inkscape:snap-page="true"
+     inkscape:zoom="0.67081229"
+     inkscape:cx="-157.27201"
+     inkscape:cy="439.01998"
+     inkscape:window-width="1920"
+     inkscape:window-height="1001"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       id="rect31"
+       style="fill:#0000ff;fill-rule:evenodd;stroke-width:0.999999"
+       d="M 306.32617 86.199219 A 198.08714 198.08714 0 0 0 208.88281 256.40625 A 198.08714 198.08714 0 0 0 353.30273 446.95703 L 353.30273 821.39258 L 353.45508 821.39258 A 53.515171 53.515171 0 0 0 406.96875 874.9082 A 53.515171 53.515171 0 0 0 460.48438 821.39258 L 460.63477 821.39258 L 460.63477 446.95703 A 198.08714 198.08714 0 0 0 605.05664 256.40625 A 198.08714 198.08714 0 0 0 511.86719 88.396484 L 511.86719 262.02539 A 103.3023 74.841483 0 0 1 512.29492 268.79688 A 103.3023 74.841483 0 0 1 408.99219 343.63867 A 103.3023 74.841483 0 0 1 305.69141 268.79688 A 103.3023 74.841483 0 0 1 306.32617 260.94727 L 306.32617 86.199219 z "
+       transform="scale(0.26458333)" />
+  </g>
+</svg>

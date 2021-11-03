@@ -1,0 +1,70 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Scene/Zone.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Code/LevelHelper.gd" type="Script" id=5]
+
+[sub_resource type="Shader" id=1]
+code = "shader_type canvas_item;
+
+uniform sampler2D img;
+
+uniform float R;
+
+
+void fragment(){
+	
+	if(texture(img, UV).g > 0.75){
+		//COLOR.g = 1.
+		COLOR = abs(sin(TIME-UV.x*UV.x-UV.y))*vec4(1,1,1,1);
+	}
+	
+}"
+
+[sub_resource type="OpenSimplexNoise" id=4]
+period = 28.8
+persistence = 1.0
+lacunarity = 4.0
+
+[sub_resource type="NoiseTexture" id=3]
+noise = SubResource( 4 )
+
+[sub_resource type="ShaderMaterial" id=2]
+shader = SubResource( 1 )
+shader_param/R = null
+shader_param/img = SubResource( 3 )
+
+[sub_resource type="Environment" id=5]
+background_mode = 4
+tonemap_mode = 3
+glow_enabled = true
+glow_blend_mode = 0
+adjustment_enabled = true
+
+[node name="Monde" type="Node2D"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+material = SubResource( 2 )
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -5.33936
+margin_top = 5.33936
+margin_right = 1074.66
+margin_bottom = 1925.34
+grow_horizontal = 2
+grow_vertical = 2
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Zone" parent="." instance=ExtResource( 4 )]
+startSize = 500
+
+[node name="LevelHelper" type="Node" parent="."]
+script = ExtResource( 5 )
+difficulty = 3
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource( 5 )

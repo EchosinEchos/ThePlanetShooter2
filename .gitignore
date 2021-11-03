@@ -1,0 +1,21 @@
+# Import cache
+.import/
+
+# Binaries
+bin/
+build/
+lib/
+
+# Export
+Export/
+
+# Addons
+addons/
+
+# Avoid bad surprise
+export_presets.cfg
+
+# Supress Useless
+export_presets.cfg
+
+asteroid-asteroid-svgrepo-com*

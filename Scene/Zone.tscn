@@ -1,0 +1,124 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://Code/Zone.gd" type="Script" id=1]
+[ext_resource path="res://otherRes/endZone.shader" type="Shader" id=2]
+[ext_resource path="res://Image/Ball/asteroid-asteroid-svgrepo-com.svg" type="Texture" id=3]
+[ext_resource path="res://otherRes/Fire.tres" type="Material" id=4]
+[ext_resource path="res://otherRes/fire.png" type="Texture" id=5]
+
+[sub_resource type="Shader" id=3]
+
+[sub_resource type="ShaderMaterial" id=4]
+shader = SubResource( 3 )
+
+[sub_resource type="ShaderMaterial" id=6]
+shader = ExtResource( 2 )
+shader_param/percent = 0.15
+
+[sub_resource type="ParticlesMaterial" id=7]
+emission_shape = 2
+emission_box_extents = Vector3( 1, 1000, 1 )
+flag_disable_z = true
+spread = 0.0
+gravity = Vector3( 0, 0, 0 )
+initial_velocity = 2000.0
+initial_velocity_random = 0.33
+angular_velocity = 117.2
+angular_velocity_random = 1.0
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+angle = 720.0
+angle_random = 1.0
+scale = 0.3
+scale_random = 1.0
+
+[sub_resource type="ProxyTexture" id=8]
+flags = 4
+base = ExtResource( 3 )
+
+[sub_resource type="ParticlesMaterial" id=9]
+emission_shape = 2
+emission_box_extents = Vector3( 1, 1000, 1 )
+flag_disable_z = true
+direction = Vector3( -1, 0, 0 )
+spread = 0.0
+gravity = Vector3( 0, 0, 0 )
+initial_velocity = 2000.0
+initial_velocity_random = 0.33
+angular_velocity = 117.2
+angular_velocity_random = 1.0
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+angle = 720.0
+angle_random = 1.0
+scale = 0.3
+scale_random = 1.0
+
+[node name="Zone" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+d_to_v = 1000.0
+
+[node name="startRect" type="ColorRect" parent="."]
+show_behind_parent = true
+material = SubResource( 4 )
+margin_top = 1420.0
+margin_right = 1080.0
+margin_bottom = 1920.0
+color = Color( 0.192157, 0.192157, 0.192157, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="endRect" type="ColorRect" parent="."]
+show_behind_parent = true
+material = SubResource( 6 )
+margin_top = 1770.0
+margin_right = 1080.0
+margin_bottom = 1920.0
+color = Color( 1.2, 0.12, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Particles2D" type="Particles2D" parent="."]
+visible = false
+position = Vector2( 0, 1603.19 )
+scale = Vector2( 0.1, 0.1 )
+amount = 5
+lifetime = 10.0
+process_material = SubResource( 7 )
+texture = SubResource( 8 )
+
+[node name="Particles2D2" type="Particles2D" parent="."]
+visible = false
+position = Vector2( 1080, 1603.19 )
+scale = Vector2( 0.1, 0.1 )
+amount = 5
+lifetime = 10.0
+process_material = SubResource( 9 )
+texture = SubResource( 8 )
+
+[node name="Fire" type="Particles2D" parent="."]
+position = Vector2( -175.104, -179.594 )
+scale = Vector2( 0.1, 0.1 )
+emitting = false
+amount = 300
+lifetime = 0.7
+explosiveness = 0.08
+local_coords = false
+process_material = ExtResource( 4 )
+texture = ExtResource( 5 )
+
+[node name="Ball_Sprite" type="Sprite" parent="."]
+visible = false
+position = Vector2( -175.104, -179.594 )
+scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 3 )
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="Ball_Sprite"]
+remote_path = NodePath("../../Fire")
