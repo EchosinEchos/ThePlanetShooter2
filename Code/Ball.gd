@@ -25,5 +25,14 @@ func _physics_process(delta):
 			root.get_node("Monde/LevelHelper").win_lvl()
 			
 		elif "planete" in gr:
-			queue_free()
+			#queue_free()
+			supress()
 			
+
+
+
+func supress():
+	self.set_physics_process(false)
+	$Sprite.visible = false
+	$Fire.emitting = false
+	$Timer.start()

@@ -4,5 +4,5 @@
 
 Made with godot
 
-Created by EchosinEchos
+Created by Thibault PENNING
 Idea by my friends
