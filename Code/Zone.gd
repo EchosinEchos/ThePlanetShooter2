@@ -16,12 +16,15 @@ func sizeChanged():
 	$startRect.rect_size = Vector2(width, SceneParameters.startSize + SceneParameters.endSize)
 	$endRect.rect_position = Vector2(0, height - SceneParameters.endSize)
 	$endRect.rect_size = Vector2(width, SceneParameters.endSize)
+	print(SceneParameters.endSize)
 	pass
 
 		
 func _ready():
 	sizeChanged()	
 	$Ball_Sprite.texture = PlayerParameters.ball_texture
+	
+	SceneParameters.connect("sizeChanged", self, "sizeChanged")
 		
 		
 func _draw():

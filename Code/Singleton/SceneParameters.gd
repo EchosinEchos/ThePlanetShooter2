@@ -1,9 +1,13 @@
 extends Node
 
 signal sizeChanged
+signal stageChanged
 
-export(int) var endSize:int = 100 setget change_end_size
-export(int) var startSize:int = 300 setget change_start_size
+var endSize:int = 100 setget change_end_size
+var startSize:int = 300 setget change_start_size
+
+var stage:int = 0 setget stageChanged
+
 
 func change_start_size(size):
 	startSize = size
@@ -12,3 +16,8 @@ func change_start_size(size):
 func change_end_size(size):
 	endSize = size
 	emit_signal("sizeChanged")
+	
+func stageChanged(chg):
+	stage = chg
+	emit_signal("stageChanged")
+	

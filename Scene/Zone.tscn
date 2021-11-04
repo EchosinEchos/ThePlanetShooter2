@@ -2,8 +2,8 @@
 
 [ext_resource path="res://Code/Zone.gd" type="Script" id=1]
 [ext_resource path="res://otherRes/endZone.shader" type="Shader" id=2]
-[ext_resource path="res://otherRes/Fire.tres" type="Material" id=4]
-[ext_resource path="res://otherRes/fire.png" type="Texture" id=5]
+[ext_resource path="res://otherRes/Particules/Fire.tres" type="Material" id=4]
+[ext_resource path="res://otherRes/Particules/fire.png" type="Texture" id=5]
 
 [sub_resource type="Shader" id=1]
 
@@ -33,7 +33,6 @@ scale_random = 1.0
 
 [sub_resource type="StreamTexture" id=5]
 flags = 4
-load_path = "res://.import/asteroid-asteroid-svgrepo-com.svg-119522a54aad43c9030ba4f3e206a68f.stex"
 
 [sub_resource type="ProxyTexture" id=6]
 flags = 4
@@ -120,6 +119,7 @@ texture = ExtResource( 5 )
 visible = false
 position = Vector2( -175.104, -179.594 )
 scale = Vector2( 0.05, 0.05 )
+z_index = 1
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="Ball_Sprite"]
 remote_path = NodePath("../../Fire")

@@ -31,6 +31,10 @@ func _ready():
 	loadTexture("res://Image/Planete/")
 	if(Level_Type == LevelTypeEnum.Infinity):
 		buildRandomLevel()
+		
+		
+	GameHelper.connect("win", self, "win_lvl")
+	GameHelper.connect("nextLevel", self, "nextLevel")
 
 func clear_lvl():
 	c_tree.call_group("gravity_attracted", "queue_free")
@@ -42,7 +46,7 @@ func buildRandomLevel():
 	copyTexture.shuffle()
 	
 	var n_obj : StaticBody2D = objectif_scene.instance()
-	n_obj.position = Vector2(rng.randi_range(50, width-50), 150)
+	n_obj.position = Vector2(rng.randi_range(100, width-100), 150)
 	n_obj.radius = 100
 	tree_node.call_deferred("add_child", n_obj)
 	
@@ -66,9 +70,15 @@ func buildRandomLevel():
 
 
 func win_lvl():
+	pass
+		
+		
+func nextLevel():
 	if(Level_Type == LevelTypeEnum.Infinity):
+		SceneParameters.stage += 1
 		clear_lvl()
 		buildRandomLevel()
+	
 		
 		
 func loadTexture(path):

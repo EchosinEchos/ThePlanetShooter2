@@ -1,13 +1,14 @@
 [gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Code/Ball.gd" type="Script" id=2]
-[ext_resource path="res://otherRes/Fire.tres" type="Material" id=4]
-[ext_resource path="res://otherRes/fire.png" type="Texture" id=5]
+[ext_resource path="res://otherRes/Particules/Fire.tres" type="Material" id=4]
+[ext_resource path="res://otherRes/Particules/fire.png" type="Texture" id=5]
 
 [sub_resource type="CircleShape2D" id=1]
 radius = 25.0
 
 [node name="Ball" type="KinematicBody2D"]
+z_index = 1
 collision_layer = 2
 script = ExtResource( 2 )
 
@@ -16,7 +17,7 @@ position = Vector2( 2.38419e-07, -1.19209e-07 )
 scale = Vector2( 0.1, 0.1 )
 amount = 500
 lifetime = 0.7
-visibility_rect = Rect2( -1000, -1000, 1000, 1000 )
+visibility_rect = Rect2( -10000, -10000, 10000, 10000 )
 local_coords = false
 process_material = ExtResource( 4 )
 texture = ExtResource( 5 )

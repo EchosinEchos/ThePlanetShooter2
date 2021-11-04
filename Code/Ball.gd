@@ -4,11 +4,14 @@ var a:Vector2 = Vector2.ZERO
 var v:Vector2 = Vector2.ZERO
 var dpl:Vector2 = Vector2.ZERO
 
-var root:Node
+var planete:Array
+
+var score: int = 0
 
 func _ready():
-	root = get_tree().get_root()
 	$Sprite.texture = PlayerParameters.ball_texture
+	planete = get_tree().get_nodes_in_group("gravity_attractor")
+	
 	
 func _physics_process(delta):
 	
@@ -25,16 +28,18 @@ func _physics_process(delta):
 		if "goal" in gr:
 			print("win")
 			queue_free()
-			root.get_node("Monde/LevelHelper").win_lvl()
+			GameHelper.win()
+			
 			
 		elif "planete" in gr:
 			#queue_free()
-			supress()
-			
+			suppress()
+	
+	for p in planete:
+		score += v.length()/(2*log(position.distance_to(p.position))*sqrt(planete.size()))
 
 
-
-func supress():
+func suppress():
 	self.set_physics_process(false)
 	$Sprite.visible = false
 	$Fire.emitting = false

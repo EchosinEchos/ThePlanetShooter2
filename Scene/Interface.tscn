@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://otherRes/Font.tres" type="DynamicFont" id=1]
+[ext_resource path="res://otherRes/UI/Font.tres" type="DynamicFont" id=1]
 [ext_resource path="res://Code/Interface.gd" type="Script" id=2]
+[ext_resource path="res://otherRes/UI/9Patch.svg" type="Texture" id=3]
+[ext_resource path="res://otherRes/UI/Theme/Theme.tres" type="Theme" id=4]
 
 [node name="Control" type="Control"]
 anchor_right = 1.0
@@ -11,45 +13,70 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="MarginContainer" type="MarginContainer" parent="."]
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_left = 80.0
-margin_right = -80.0
+[node name="ResumeContainer" type="NinePatchRect" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -450.0
+margin_top = -350.0
+margin_right = 450.0
+margin_bottom = 350.0
+texture = ExtResource( 3 )
+patch_margin_left = 50
+patch_margin_top = 50
+patch_margin_right = 50
+patch_margin_bottom = 50
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
-margin_right = 920.0
-margin_bottom = 1920.0
+[node name="VBoxContainer" type="VBoxContainer" parent="ResumeContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer"]
-margin_right = 920.0
-margin_bottom = 47.0
+[node name="RichTextLabel" type="RichTextLabel" parent="ResumeContainer/VBoxContainer"]
+margin_right = 900.0
 
-[node name="StageContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/VBoxContainer"]
-margin_right = 920.0
-margin_bottom = 47.0
+[node name="HBoxContainer" type="HBoxContainer" parent="ResumeContainer/VBoxContainer"]
+margin_top = 4.0
+margin_right = 900.0
+margin_bottom = 87.0
+
+[node name="Button" type="Button" parent="ResumeContainer/VBoxContainer/HBoxContainer"]
+margin_right = 143.0
+margin_bottom = 83.0
+theme = ExtResource( 4 )
+text = "Next"
+
+[node name="StageContainer" type="HBoxContainer" parent="."]
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
 alignment = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Stage_Label" type="Label" parent="MarginContainer/VBoxContainer/VBoxContainer/StageContainer"]
-margin_left = 348.0
-margin_right = 534.0
+[node name="Stage_Label" type="Label" parent="StageContainer"]
+margin_left = 428.0
+margin_right = 614.0
 margin_bottom = 47.0
 custom_fonts/font = ExtResource( 1 )
+custom_colors/font_color = Color( 1, 1, 1, 0.745098 )
 text = "Stage: "
 align = 1
 valign = 1
 
-[node name="Number" type="Label" parent="MarginContainer/VBoxContainer/VBoxContainer/StageContainer"]
-margin_left = 538.0
-margin_right = 571.0
+[node name="Number" type="Label" parent="StageContainer"]
+margin_left = 618.0
+margin_right = 651.0
 margin_bottom = 47.0
 custom_fonts/font = ExtResource( 1 )
+custom_colors/font_color = Color( 1, 1, 1, 0.745098 )
 text = "0"
 align = 1
 valign = 1
