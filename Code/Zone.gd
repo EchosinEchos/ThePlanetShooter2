@@ -16,7 +16,6 @@ func sizeChanged():
 	$startRect.rect_size = Vector2(width, SceneParameters.startSize + SceneParameters.endSize)
 	$endRect.rect_position = Vector2(0, height - SceneParameters.endSize)
 	$endRect.rect_size = Vector2(width, SceneParameters.endSize)
-	print(SceneParameters.endSize)
 	pass
 
 		

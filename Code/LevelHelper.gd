@@ -2,10 +2,6 @@ extends Node
 
 class_name LevelHelper, "res://Useless/wrench.svg"
 
-enum LevelTypeEnum {Infinity, OpenLevel, StoryLevel}
-
-export(LevelTypeEnum) var Level_Type
-
 #export(bool) var create_rand_level_at_start :bool = true
 export(int, 1, 4) var difficulty:int = 2
 
@@ -21,20 +17,19 @@ var width:int = ProjectSettings.get_setting("display/window/size/width")
 var c_tree:SceneTree
 var tree_node:Node
 
-var planeteDir:Directory = Directory.new()
+
 var planeteTexture:Array
 
 func _ready():
 	rng.randomize()	
 	c_tree = get_tree()
 	tree_node = c_tree.get_root()
-	loadTexture("res://Image/Planete/")
-	if(Level_Type == LevelTypeEnum.Infinity):
-		buildRandomLevel()
+	planeteTexture = Util.loadTexture("res://Image/Planete/")
 		
 		
 	GameHelper.connect("win", self, "win_lvl")
 	GameHelper.connect("nextLevel", self, "nextLevel")
+	GameHelper.connect("play", self, "play")
 
 func clear_lvl():
 	c_tree.call_group("gravity_attracted", "queue_free")
@@ -48,7 +43,7 @@ func buildRandomLevel():
 	var n_obj : StaticBody2D = objectif_scene.instance()
 	n_obj.position = Vector2(rng.randi_range(100, width-100), 150)
 	n_obj.radius = 100
-	tree_node.call_deferred("add_child", n_obj)
+	self.call_deferred("add_child", n_obj)
 	
 	var yoff:int = 250
 	for i in range(1, rng.randi_range(1, difficulty)+1):
@@ -64,7 +59,7 @@ func buildRandomLevel():
 			copyTexture.shuffle()
 		n_plan.get_node("Sprite").texture = copyTexture.pop_back()
 		
-		tree_node.call_deferred("add_child", n_plan)
+		self.call_deferred("add_child", n_plan)
 		yoff += n_rad/2
 
 
@@ -75,19 +70,14 @@ func win_lvl():
 		
 		
 func nextLevel():
-	if(Level_Type == LevelTypeEnum.Infinity):
+	if(SceneParameters.Level_Type == SceneParameters.LevelTypeEnum.Infinity):
 		clear_lvl()
 		buildRandomLevel()
-	
 		
 		
-func loadTexture(path):
-	planeteDir.open(path)
-	planeteDir.list_dir_begin()
-	
-	var file_name = planeteDir.get_next()
-	while file_name != "":
-		if file_name.ends_with(".import") :#and file_name != "." and file_name != "..":
-			planeteTexture.append(ResourceLoader.load(path + file_name.get_basename()))
-		file_name = planeteDir.get_next()
+func play():
+	print("play")
+	if(SceneParameters.Level_Type == SceneParameters.LevelTypeEnum.Infinity):
+		print("Playing infinity")
+		buildRandomLevel()
 

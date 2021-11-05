@@ -39,13 +39,14 @@ _global_script_class_icons={
 [application]
 
 config/name="ThePlanetShooter"
-run/main_scene="res://Scene/Monde.tscn"
+run/main_scene="res://Scene/Menu.tscn"
 boot_splash/fullsize=false
 boot_splash/use_filter=false
 config/icon="res://Image/Icon.png"
 
 [autoload]
 
+Util="*res://Code/Singleton/Util.gd"
 GameHelper="*res://Code/Singleton/GameHelper.gd"
 PlayerParameters="*res://Code/Singleton/PlayerParameters.gd"
 SceneParameters="*res://Code/Singleton/SceneParameters.gd"

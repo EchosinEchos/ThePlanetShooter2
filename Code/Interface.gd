@@ -25,12 +25,18 @@ func win():
 	$TopLayer/ResumeContainer.visible = true
 	$TopLayer/ClickBlocker.visible = true
 	$TopLayer/ResumeContainer/MarginContainer/VBoxContainer/ScoreLabel.text = String(GameHelper.score)
+	get_tree().paused = true
 
 func _on_next_Button_pressed():
 	$TopLayer/ResumeContainer.visible = false
 	$TopLayer/ClickBlocker.visible = false
+	get_tree().paused = false
 	GameHelper.nextLevel()
 
 
 func _on_skipButton_pressed():
 	GameHelper.emit_signal("nextLevel")
+
+
+func _on_closeButton_pressed():
+	GameHelper.emit_signal("close")

@@ -26,18 +26,74 @@
      units="px"
      inkscape:snap-page="true"
      inkscape:zoom="0.23716796"
-     inkscape:cx="78.003791"
-     inkscape:cy="276.17558"
+     inkscape:cx="402.66822"
+     inkscape:cy="482.78022"
      inkscape:window-width="1920"
      inkscape:window-height="1001"
      inkscape:window-x="-9"
      inkscape:window-y="-9"
      inkscape:window-maximized="1"
-     inkscape:current-layer="g2196"
+     inkscape:current-layer="layer4"
      inkscape:snap-object-midpoints="true"
      inkscape:snap-midpoints="true" />
   <defs
      id="defs2" />
+  <g
+     inkscape:groupmode="layer"
+     id="layer4"
+     inkscape:label="Layer 4">
+    <rect
+       style="fill:none;stroke-width:0.466364"
+       id="rect2979"
+       width="637.00464"
+       height="398.42337"
+       x="-186.21063"
+       y="-66.920021"
+       inkscape:export-filename="C:\Users\thiba\Documents\ThePlanetShooter2\Image\Ball\Spoutnik.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="Layer 2">
+    <g
+       id="g2341-4"
+       transform="matrix(0.86602557,-0.36498087,0.49999971,0.6321659,-118.79526,30.589035)">
+      <rect
+         style="fill:#4d4d4d;stroke-width:0.117368"
+         id="rect910-4"
+         width="40"
+         height="15"
+         x="187.65036"
+         y="171.69731"
+         transform="rotate(4.344203)" />
+      <rect
+         style="fill:#b3b3b3;stroke-width:0.131454"
+         id="rect910-9-9"
+         width="303.76166"
+         height="6.6718936"
+         x="207.64975"
+         y="175.86064"
+         transform="matrix(0.99712673,0.07575142,-0.07574462,0.99712725,0,0)" />
+      <rect
+         style="fill:#4d4d4d;stroke-width:0.117368"
+         id="rect2325-2"
+         width="40"
+         height="15"
+         x="312.72672"
+         y="-68.092911"
+         transform="matrix(0.56416321,0.82566329,0.82566329,-0.56416321,0,0)" />
+      <rect
+         style="fill:#b3b3b3;stroke-width:0.131454"
+         id="rect2327-6"
+         width="303.76166"
+         height="6.6718936"
+         x="332.72693"
+         y="-63.929985"
+         transform="matrix(0.56416602,0.82566137,0.82566522,-0.56416039,0,0)" />
+    </g>
+  </g>
   <g
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
@@ -48,29 +104,62 @@
        cx="132.29167"
        cy="132.29167"
        r="132.29167" />
+    <ellipse
+       style="fill:#cccccc;stroke-width:0.206792"
+       id="path2672"
+       cx="12.299972"
+       cy="101.20951"
+       rx="33.824047"
+       ry="15.081836"
+       transform="matrix(0.61461014,-0.78883102,0.29456466,0.95563155,0,0)" />
+    <ellipse
+       style="fill:#ececec;stroke-width:0.0624754"
+       id="path2672-2"
+       cx="-15.481594"
+       cy="99.979805"
+       rx="7.1018176"
+       ry="6.556325"
+       transform="matrix(0.75787519,-0.65239957,0.35934842,0.93320347,0,0)" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer3"
+     inkscape:label="Layer 3">
     <g
-       id="g2082"
-       transform="rotate(-15,74.63639,162.93705)">
-      <g
-         id="g2196"
-         transform="rotate(-15,-138.0884,22.30563)">
-        <rect
-           style="fill:#4d4d4d;stroke-width:0.117368"
-           id="rect910"
-           width="40"
-           height="15"
-           x="56.477676"
-           y="112.40556"
-           transform="rotate(4.344203)" />
-        <rect
-           style="fill:#b3b3b3;stroke-width:0.131454"
-           id="rect910-9"
-           width="303.76166"
-           height="6.6718936"
-           x="76.477264"
-           y="116.56936"
-           transform="matrix(0.99712673,0.07575142,-0.07574462,0.99712725,0,0)" />
-      </g>
+       id="g2341"
+       transform="rotate(-30,-56.900491,182.68202)">
+      <rect
+         style="fill:#4d4d4d;stroke-width:0.117368"
+         id="rect910"
+         width="40"
+         height="15"
+         x="187.65036"
+         y="171.69731"
+         transform="rotate(4.344203)" />
+      <rect
+         style="fill:#b3b3b3;stroke-width:0.131454"
+         id="rect910-9"
+         width="303.76166"
+         height="6.6718936"
+         x="207.64975"
+         y="175.86064"
+         transform="matrix(0.99712673,0.07575142,-0.07574462,0.99712725,0,0)" />
+      <rect
+         style="fill:#4d4d4d;stroke-width:0.117368"
+         id="rect2325"
+         width="40"
+         height="15"
+         x="312.72672"
+         y="-68.092911"
+         transform="matrix(0.56416321,0.82566329,0.82566329,-0.56416321,0,0)" />
+      <rect
+         style="fill:#b3b3b3;stroke-width:0.131454"
+         id="rect2327"
+         width="303.76166"
+         height="6.6718936"
+         x="332.72693"
+         y="-63.929985"
+         transform="matrix(0.56416602,0.82566137,0.82566522,-0.56416039,0,0)" />
     </g>
   </g>
 </svg>
