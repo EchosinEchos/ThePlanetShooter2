@@ -61,6 +61,7 @@ func _input(event):
 						
 						get_tree().get_root().add_child(nw_ball)
 						$Fire.emitting = false
+						GameHelper.nb_ball_launched += 1
 						print("Lauch")
 					
 					

@@ -7,12 +7,30 @@ func _ready():
 	SceneParameters.connect("sizeChanged", self, "sizeChanged")
 	SceneParameters.connect("stageChanged", self, "stageChanged")
 	
+	
+	GameHelper.connect("win", self, "win")
+	
 
 func  sizeChanged():
-	$StageContainer.margin_top = -(SceneParameters.endSize + SceneParameters.startSize)
-	$StageContainer.margin_bottom = -(SceneParameters.endSize)
+	$MarginContainer.margin_top = -(SceneParameters.endSize + SceneParameters.startSize)
+	$MarginContainer.margin_bottom = -(SceneParameters.endSize)
 	pass
 	
 func stageChanged():
-	$StageContainer/Number.text = String(SceneParameters.stage)
+	$MarginContainer/StageContainer/Number.text = String(SceneParameters.stage)
 	pass
+
+
+func win():
+	$TopLayer/ResumeContainer.visible = true
+	$TopLayer/ClickBlocker.visible = true
+	$TopLayer/ResumeContainer/MarginContainer/VBoxContainer/ScoreLabel.text = String(GameHelper.score)
+
+func _on_next_Button_pressed():
+	$TopLayer/ResumeContainer.visible = false
+	$TopLayer/ClickBlocker.visible = false
+	GameHelper.nextLevel()
+
+
+func _on_skipButton_pressed():
+	GameHelper.emit_signal("nextLevel")

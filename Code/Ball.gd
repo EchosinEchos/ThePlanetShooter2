@@ -28,6 +28,7 @@ func _physics_process(delta):
 		if "goal" in gr:
 			print("win")
 			queue_free()
+			GameHelper.score = score/sqrt(GameHelper.nb_ball_launched)
 			GameHelper.win()
 			
 			

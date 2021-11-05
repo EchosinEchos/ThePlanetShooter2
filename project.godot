@@ -42,7 +42,7 @@ config/name="ThePlanetShooter"
 run/main_scene="res://Scene/Monde.tscn"
 boot_splash/fullsize=false
 boot_splash/use_filter=false
-config/icon="res://icon.png"
+config/icon="res://Image/Icon.png"
 
 [autoload]
 
@@ -63,6 +63,11 @@ window/stretch/aspect="keep"
 [gdnative]
 
 singletons=[ "res://addons/godot-git-plugin/git_api.gdnlib" ]
+singletons_disabled=[ "res://addons/godot-git-plugin/git_api.gdnlib" ]
+
+[gui]
+
+theme/custom="res://otherRes/UI/Theme/Theme.tres"
 
 [physics]
 

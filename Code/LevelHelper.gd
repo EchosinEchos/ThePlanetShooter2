@@ -42,7 +42,7 @@ func clear_lvl():
 	c_tree.call_group("goal", "queue_free")
 
 func buildRandomLevel():
-	var copyTexture = planeteTexture
+	var copyTexture = planeteTexture.duplicate()
 	copyTexture.shuffle()
 	
 	var n_obj : StaticBody2D = objectif_scene.instance()
@@ -60,7 +60,7 @@ func buildRandomLevel():
 		n_plan.mass = n_rad * n_rad * 0.5 / 4
 		
 		if copyTexture.size() <1:
-			copyTexture = planeteTexture
+			copyTexture = planeteTexture.duplicate()
 			copyTexture.shuffle()
 		n_plan.get_node("Sprite").texture = copyTexture.pop_back()
 		
@@ -70,12 +70,12 @@ func buildRandomLevel():
 
 
 func win_lvl():
-	pass
+	SceneParameters.stage += 1
+
 		
 		
 func nextLevel():
 	if(Level_Type == LevelTypeEnum.Infinity):
-		SceneParameters.stage += 1
 		clear_lvl()
 		buildRandomLevel()
 	
@@ -87,7 +87,7 @@ func loadTexture(path):
 	
 	var file_name = planeteDir.get_next()
 	while file_name != "":
-		if !file_name.ends_with(".import") and file_name != "." and file_name != "..":
-			planeteTexture.append(ResourceLoader.load(path + file_name))
+		if file_name.ends_with(".import") :#and file_name != "." and file_name != "..":
+			planeteTexture.append(ResourceLoader.load(path + file_name.get_basename()))
 		file_name = planeteDir.get_next()
 

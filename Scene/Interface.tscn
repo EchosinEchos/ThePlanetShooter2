@@ -1,19 +1,54 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://otherRes/UI/Font.tres" type="DynamicFont" id=1]
 [ext_resource path="res://Code/Interface.gd" type="Script" id=2]
 [ext_resource path="res://otherRes/UI/9Patch.svg" type="Texture" id=3]
 [ext_resource path="res://otherRes/UI/Theme/Theme.tres" type="Theme" id=4]
+[ext_resource path="res://otherRes/UI/ConcertOne-Regular.ttf" type="DynamicFontData" id=5]
+[ext_resource path="res://otherRes/UI/Forward.svg" type="Texture" id=6]
+
+[sub_resource type="DynamicFont" id=1]
+size = 120
+outline_size = 15
+use_mipmaps = true
+font_data = ExtResource( 5 )
 
 [node name="Control" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+theme = ExtResource( 4 )
 script = ExtResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="ResumeContainer" type="NinePatchRect" parent="."]
+[node name="TopLayer" type="CanvasLayer" parent="."]
+
+[node name="skipButton" type="Button" parent="TopLayer"]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -120.0
+margin_top = 40.0
+margin_right = -40.0
+margin_bottom = 120.0
+size_flags_horizontal = 2
+size_flags_vertical = 2
+icon = ExtResource( 6 )
+expand_icon = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ClickBlocker" type="ReferenceRect" parent="TopLayer"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ResumeContainer" type="NinePatchRect" parent="TopLayer"]
+visible = false
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -31,52 +66,109 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="VBoxContainer" type="VBoxContainer" parent="ResumeContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="TopLayer/ResumeContainer"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+margin_left = 60.0
+margin_top = 80.0
+margin_right = -60.0
+margin_bottom = -60.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="RichTextLabel" type="RichTextLabel" parent="ResumeContainer/VBoxContainer"]
-margin_right = 900.0
+[node name="VBoxContainer" type="VBoxContainer" parent="TopLayer/ResumeContainer/MarginContainer"]
+margin_right = 780.0
+margin_bottom = 560.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
-[node name="HBoxContainer" type="HBoxContainer" parent="ResumeContainer/VBoxContainer"]
-margin_top = 4.0
-margin_right = 900.0
-margin_bottom = 87.0
+[node name="CongatText" type="Label" parent="TopLayer/ResumeContainer/MarginContainer/VBoxContainer"]
+margin_right = 780.0
+margin_bottom = 237.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource( 4 )
+text = "Congratulation
 
-[node name="Button" type="Button" parent="ResumeContainer/VBoxContainer/HBoxContainer"]
-margin_right = 143.0
+
+Your score is :"
+align = 1
+
+[node name="ScoreLabel" type="Label" parent="TopLayer/ResumeContainer/MarginContainer/VBoxContainer"]
+margin_top = 241.0
+margin_right = 780.0
+margin_bottom = 473.0
+size_flags_horizontal = 3
+size_flags_vertical = 7
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+text = "0
+"
+align = 1
+valign = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="TopLayer/ResumeContainer/MarginContainer/VBoxContainer"]
+margin_top = 477.0
+margin_right = 780.0
+margin_bottom = 560.0
+grow_vertical = 0
+alignment = 1
+
+[node name="nextButton" type="Button" parent="TopLayer/ResumeContainer/MarginContainer/VBoxContainer/HBoxContainer"]
+margin_right = 780.0
 margin_bottom = 83.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
 theme = ExtResource( 4 )
 text = "Next"
 
-[node name="StageContainer" type="HBoxContainer" parent="."]
+[node name="MarginContainer" type="MarginContainer" parent="."]
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
+margin_top = -537.0
+margin_bottom = -254.0
+grow_horizontal = 0
+grow_vertical = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="StageContainer" type="HBoxContainer" parent="MarginContainer"]
+margin_right = 1080.0
+margin_bottom = 283.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
 alignment = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Stage_Label" type="Label" parent="StageContainer"]
-margin_left = 428.0
+[node name="Stage_Label" type="Label" parent="MarginContainer/StageContainer"]
+margin_left = 420.0
+margin_top = 114.0
 margin_right = 614.0
-margin_bottom = 47.0
+margin_bottom = 169.0
 custom_fonts/font = ExtResource( 1 )
 custom_colors/font_color = Color( 1, 1, 1, 0.745098 )
 text = "Stage: "
 align = 1
 valign = 1
 
-[node name="Number" type="Label" parent="StageContainer"]
+[node name="Number" type="Label" parent="MarginContainer/StageContainer"]
 margin_left = 618.0
-margin_right = 651.0
-margin_bottom = 47.0
+margin_top = 114.0
+margin_right = 659.0
+margin_bottom = 169.0
 custom_fonts/font = ExtResource( 1 )
 custom_colors/font_color = Color( 1, 1, 1, 0.745098 )
 text = "0"
 align = 1
 valign = 1
+
+[connection signal="pressed" from="TopLayer/skipButton" to="." method="_on_skipButton_pressed"]
+[connection signal="pressed" from="TopLayer/ResumeContainer/MarginContainer/VBoxContainer/HBoxContainer/nextButton" to="." method="_on_next_Button_pressed"]
