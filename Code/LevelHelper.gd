@@ -76,7 +76,6 @@ func nextLevel():
 		
 		
 func play():
-	print("play")
 	if(SceneParameters.Level_Type == SceneParameters.LevelTypeEnum.Infinity):
 		print("Playing infinity")
 		buildRandomLevel()

@@ -6,8 +6,10 @@ var ballButton:PackedScene = preload("res://otherRes/UI/Scene/ballCustomisationB
 var listOfTexture:Array
 
 func _ready():
-	$AnimationPlayer.play("Menu Animation")
+	if !OS.is_debug_build():
+		$AnimationPlayer.play("Menu Animation")
 	listOfTexture = Util.listTexture("res://Image/Ball/", ["svg"])
+	addButton_to_Grid()
 	
 
 
@@ -19,13 +21,17 @@ func _on_infinityButton_pressed():
 	GameHelper.call_deferred("play")
 
 
-func _on_customButton_pressed():
+func addButton_to_Grid():
 	for tex in listOfTexture:
-		var n_node = ballButton.instance()
+		var n_node:Button = ballButton.instance()
 		n_node.texturePath = tex
+		n_node.group = preload("res://otherRes/UI/Scene/ballCustomisationGroupButton.tres")
 		$CustomisationContainer/MarginContainer/VBoxContainer/Panel/ScrollContainer/GridContainer.add_child(n_node)
+
+func _on_customButton_pressed():
 	$CustomisationContainer.visible = true
 
 
 func _on_okButton_pressed():
+	PlayerParameters.saveVar()
 	$CustomisationContainer.visible= false

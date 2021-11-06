@@ -24,3 +24,7 @@ func stageChanged(chg):
 	stage = chg
 	emit_signal("stageChanged")
 	
+	if stage > PlayerParameters.maxStage:
+		PlayerParameters.maxStage = stage
+		PlayerParameters.saveVar()
+	

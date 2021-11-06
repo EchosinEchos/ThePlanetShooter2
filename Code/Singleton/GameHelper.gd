@@ -19,6 +19,10 @@ func _ready():
 func win():
 	emit_signal("win")
 	
+	if GameHelper.score > PlayerParameters.highScore:
+		PlayerParameters.highScore = GameHelper.score
+		PlayerParameters.saveVar()
+	
 func nextLevel():
 	nb_ball_launched = 0
 	emit_signal("nextLevel")

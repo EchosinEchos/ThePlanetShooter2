@@ -56,12 +56,10 @@ func _input(event):
 						nw_ball.position = event.position
 						var dir:Vector2 = startPos - event.position
 						nw_ball.v = dir.normalized() * dir.length() * 0.15
-						print(nw_ball.v)
 						
 						get_tree().get_root().add_child(nw_ball)
 						$Fire.emitting = false
 						GameHelper.nb_ball_launched += 1
-						print("Lauch")
 					
 					
 	elif alreadyPressed == true:
