@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="1000"
+   height="1000"
+   viewBox="0 0 264.58333 264.58334"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.1 (c68e22c387, 2021-05-23)"
+   sodipodi:docname="Capsule.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#505050"
+     bordercolor="#eeeeee"
+     borderopacity="1"
+     inkscape:pageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="false"
+     units="px"
+     inkscape:snap-page="true"
+     inkscape:zoom="0.33540615"
+     inkscape:cx="289.20162"
+     inkscape:cy="702.13383"
+     inkscape:window-width="1920"
+     inkscape:window-height="1001"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1"
+     inkscape:snap-object-midpoints="true"
+     inkscape:snap-midpoints="true"
+     inkscape:snap-bbox="true"
+     inkscape:bbox-paths="true"
+     inkscape:bbox-nodes="true"
+     inkscape:snap-bbox-edge-midpoints="true"
+     inkscape:snap-bbox-midpoints="true"
+     inkscape:snap-intersection-paths="true" />
+  <defs
+     id="defs2" />
+  <g
+     inkscape:groupmode="layer"
+     id="layer4"
+     inkscape:label="Layer 4">
+    <rect
+       style="fill:none;stroke-width:0.466364"
+       id="rect2979"
+       width="637.00464"
+       height="398.42337"
+       x="-186.21063"
+       y="-66.920021"
+       inkscape:export-filename="C:\Users\thiba\Documents\ThePlanetShooter2\Image\Ball\Spoutnik.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="Layer 2" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       id="path10787"
+       style="fill:#483737"
+       inkscape:transform-center-x="1.4725294e-05"
+       inkscape:transform-center-y="-35.861903"
+       d="m 500.00003,921.64214 c 1e-5,366.87396 -750.00005,433.01276 -750.00005,433.01276 V 488.62942 c 0,0 750.00004,66.13881 750.00005,433.01272 z"
+       sodipodi:nodetypes="zccz"
+       transform="matrix(0,-0.28689522,0.30551449,0,-149.28337,172.12734)" />
+    <path
+       id="path10787-1"
+       style="fill:#241c1c;stroke-width:0.116705"
+       inkscape:transform-center-x="6.462743e-06"
+       inkscape:transform-center-y="-18.035905"
+       d="m 132.29166,82.157712 c 34.63114,0 40.87432,108.215448 40.87432,108.215448 H 91.417351 c 0,0 6.243186,-108.215448 40.874309,-108.215448 z"
+       sodipodi:nodetypes="zccz" />
+    <ellipse
+       style="fill:#241c1c;stroke-width:0.264583"
+       id="path9088"
+       cx="132.29167"
+       cy="243.85115"
+       rx="132.29167"
+       ry="20.732189" />
+    <ellipse
+       style="fill:#483737;stroke:#241c1c;stroke-width:1.265;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+       id="path11791"
+       cx="69.684395"
+       cy="98.18515"
+       rx="15.897224"
+       ry="34.862339"
+       transform="rotate(18.43888)" />
+    <path
+       id="path11791-37"
+       style="fill:#483737;stroke:#241c1c;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none"
+       transform="matrix(0.01781151,0.99984136,-0.99999169,0.00407688,0,0)"
+       d="m 44.958283,-131.6282 c -1e-6,19.35978 -3.423757,35.097289 -7.648007,35.053981 -23.004292,-0.235846 -7.759929,-7.605541 -7.648007,-35.053981 0.111922,-27.44844 -12.611651,-35.89742 7.648007,-35.05399 4.222634,0.17579 7.648007,15.69421 7.648007,35.05399 z"
+       sodipodi:nodetypes="sszss" />
+    <ellipse
+       style="fill:#241c1c;stroke-width:0.195918"
+       id="path11791-3"
+       transform="matrix(0.68309744,0.73032725,-0.3856189,0.92265815,0,0)"
+       ry="26.457956"
+       rx="9.0304966"
+       cy="60.788055"
+       cx="75.732925" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer3"
+     inkscape:label="Layer 3" />
+</svg>
