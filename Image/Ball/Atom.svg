@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="1000"
+   height="1000"
+   viewBox="0 0 264.58333 264.58334"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.1 (c68e22c387, 2021-05-23)"
+   sodipodi:docname="Atom.svg"
+   inkscape:export-filename="C:\Users\thiba\Documents\ThePlanetShooter2\Image\Ball\Pomme.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#505050"
+     bordercolor="#eeeeee"
+     borderopacity="1"
+     inkscape:pageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="false"
+     units="px"
+     inkscape:snap-page="true"
+     inkscape:zoom="0.47433592"
+     inkscape:cx="532.32317"
+     inkscape:cy="599.78591"
+     inkscape:window-width="1920"
+     inkscape:window-height="991"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer6"
+     inkscape:snap-object-midpoints="true"
+     inkscape:snap-midpoints="true"
+     inkscape:snap-bbox="true"
+     inkscape:bbox-paths="true"
+     inkscape:bbox-nodes="true"
+     inkscape:snap-bbox-edge-midpoints="true"
+     inkscape:snap-bbox-midpoints="true"
+     inkscape:snap-intersection-paths="true"
+     inkscape:snap-global="true" />
+  <defs
+     id="defs2">
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient13269">
+      <stop
+         style="stop-color:#afdde9;stop-opacity:1;"
+         offset="0"
+         id="stop13265" />
+      <stop
+         style="stop-color:#afdde9;stop-opacity:0"
+         offset="1"
+         id="stop13267" />
+    </linearGradient>
+    <inkscape:path-effect
+       effect="knot"
+       id="path-effect12271"
+       is_visible="true"
+       lpeversion="1"
+       switcher_size="15"
+       interruption_width="4"
+       prop_to_stroke_width="true"
+       add_stroke_width="inkscape_1.0_and_up"
+       both="false"
+       inverse_width="false"
+       add_other_stroke_width="inkscape_1.0_and_up"
+       crossing_points_vector="" />
+    <inkscape:path-effect
+       effect="knot"
+       id="path-effect12245"
+       is_visible="true"
+       lpeversion="1"
+       switcher_size="15"
+       interruption_width="3"
+       prop_to_stroke_width="true"
+       add_stroke_width="inkscape_1.0_and_up"
+       both="false"
+       inverse_width="false"
+       add_other_stroke_width="inkscape_1.0_and_up"
+       crossing_points_vector="" />
+    <inkscape:path-effect
+       effect="mirror_symmetry"
+       start_point="369.09851,78.759705"
+       end_point="369.09851,413.23792"
+       center_point="369.09851,245.99881"
+       id="path-effect12120"
+       is_visible="true"
+       lpeversion="1.1"
+       mode="free"
+       discard_orig_path="false"
+       fuse_paths="false"
+       oposite_fuse="false"
+       split_items="false"
+       split_open="false" />
+    <inkscape:path-effect
+       effect="mirror_symmetry"
+       start_point="369.09851,78.759705"
+       end_point="369.09851,413.23792"
+       center_point="369.09851,245.99881"
+       id="path-effect12118"
+       is_visible="true"
+       lpeversion="1.1"
+       mode="horizontal"
+       discard_orig_path="false"
+       fuse_paths="false"
+       oposite_fuse="false"
+       split_items="false"
+       split_open="false" />
+    <inkscape:path-effect
+       effect="mirror_symmetry"
+       start_point="83.761699,136.19349"
+       end_point="328.35865,54.269996"
+       center_point="206.06017,95.231743"
+       id="path-effect11380"
+       is_visible="true"
+       lpeversion="1.1"
+       mode="vertical"
+       discard_orig_path="false"
+       fuse_paths="false"
+       oposite_fuse="false"
+       split_items="false"
+       split_open="false" />
+    <inkscape:path-effect
+       effect="mirror_symmetry"
+       start_point="-98.556458,88.248001"
+       end_point="77.939543,285.36092"
+       center_point="-10.308458,186.80446"
+       id="path-effect9638"
+       is_visible="true"
+       lpeversion="1.1"
+       mode="vertical"
+       discard_orig_path="false"
+       fuse_paths="false"
+       oposite_fuse="false"
+       split_items="false"
+       split_open="false" />
+    <inkscape:path-effect
+       effect="mirror_symmetry"
+       start_point="98.556459,-88.248"
+       end_point="275.05246,108.86492"
+       center_point="186.80446,10.308458"
+       id="path-effect9636"
+       is_visible="true"
+       lpeversion="1.1"
+       mode="vertical"
+       discard_orig_path="false"
+       fuse_paths="false"
+       oposite_fuse="false"
+       split_items="false"
+       split_open="false" />
+    <inkscape:path-effect
+       effect="mirror_symmetry"
+       start_point="98.556459,-88.248"
+       end_point="275.05246,108.86492"
+       center_point="186.80446,10.308458"
+       id="path-effect9499"
+       is_visible="true"
+       lpeversion="1.1"
+       mode="vertical"
+       discard_orig_path="false"
+       fuse_paths="false"
+       oposite_fuse="false"
+       split_items="false"
+       split_open="false" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient13269"
+       id="radialGradient14421"
+       cx="132.29167"
+       cy="132.29167"
+       fx="132.29167"
+       fy="132.29167"
+       r="132.29167"
+       gradientUnits="userSpaceOnUse" />
+  </defs>
+  <g
+     inkscape:groupmode="layer"
+     id="layer6"
+     inkscape:label="Layer 2"
+     style="display:none">
+    <rect
+       style="fill:#b3b3b3;fill-opacity:1;stroke:none;stroke-width:2.86461;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect9855"
+       width="371.46878"
+       height="374.52963"
+       x="-53.442711"
+       y="-54.973145"
+       rx="1.8908502"
+       ry="3.5831733"
+       inkscape:export-filename="C:\Users\thiba\Documents\ThePlanetShooter2\Image\Ball\Atom.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer5"
+     inkscape:label="Layer 1">
+    <circle
+       style="fill:url(#radialGradient14421);stroke-width:3.67882;stroke-linecap:round;fill-opacity:1;fill-rule:nonzero"
+       id="path10204"
+       cx="132.29167"
+       cy="132.29167"
+       r="132.29167" />
+    <path
+       id="path12144"
+       style="fill:none;stroke:#ffffff;stroke-width:8.27112;stroke-linecap:round;stroke-linejoin:round;paint-order:fill markers stroke"
+       transform="matrix(-0.99765767,-0.06840454,0.77446386,0.63261815,0,0)"
+       d="M -105.46525,-21.863295 C -63.155319,-60.091183 -9.0516411,-52.428652 27.68094,-3.0062266 64.413519,46.416196 75.091527,125.91519 53.958935,192.63645 50.6425,203.10732 46.665655,212.87504 42.128297,221.86008 m -17.945932,28.04513 c -24.01723494,29.70512 -55.907112,43.90459 -88.219635,36.66752 -48.9161,-10.95579 -87.23716,-68.44827 -94.30603,-141.48585 m -7.93603,-176.311414 C -286.35439,-117.05416 -344.68425,-140.80244 -311.60397,-90.39166 -278.5237,-39.980894 -161.29549,73.522151 -19.538299,192.39301 122.21888,311.26386 257.38481,409.40659 317.2179,436.90856 377.051,464.41054 348.41596,415.23418 245.87578,314.38921"
+       inkscape:path-effect="#path-effect12271"
+       inkscape:original-d="M -105.46525,-21.863295 A 112.09915,167.23911 0 0 1 27.68094,-3.0062266 112.09915,167.23911 0 0 1 53.958935,192.63645 112.09915,167.23911 0 0 1 -64.03727,286.57273 112.09915,167.23911 0 0 1 -158.3433,145.08688 m -7.93603,-176.311414 A 434.3685,43.160041 39.886539 0 0 -311.60397,-90.39166 434.3685,43.160041 39.886539 0 0 -19.538299,192.39301 434.3685,43.160041 39.886539 0 0 317.2179,436.90856 434.3685,43.160041 39.886539 0 0 245.87578,314.38921" />
+    <circle
+       style="fill:#00b20d;fill-opacity:1;stroke:none;stroke-width:7.99999;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+       id="path12311"
+       cx="51.471252"
+       cy="-21.196301"
+       r="21.196301" />
+    <circle
+       style="fill:#d40000;fill-opacity:1;stroke:none;stroke-width:7.99999;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+       id="path12311-1"
+       cx="177.93736"
+       cy="109.88608"
+       r="21.196301" />
+  </g>
+</svg>
