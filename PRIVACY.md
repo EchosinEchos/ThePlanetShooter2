@@ -1,9 +1,9 @@
 # Declaration of privacy
 
 # App Informations :
-App : The Planet Shooter 2
+__App__ : The Planet Shooter 2
 
-Developper : Thibault PENNING
+__Developper__ : Thibault PENNING
 
 
 # Data Usage
