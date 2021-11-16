@@ -1,7 +1,7 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://Image/Terre.png" type="Texture" id=1]
-[ext_resource path="res://Image/Ball/Asteroid.png" type="Texture" id=2]
+[ext_resource path="res://Image/Ball/Eagle.png" type="Texture" id=2]
 [ext_resource path="res://otherRes/Particules/fire.png" type="Texture" id=3]
 [ext_resource path="res://Image/Planete/Mars.png" type="Texture" id=4]
 [ext_resource path="res://otherRes/UI/Menu Animation.tres" type="Animation" id=5]
@@ -9,6 +9,33 @@
 [ext_resource path="res://otherRes/UI/ConcertOne-Regular.ttf" type="DynamicFontData" id=7]
 [ext_resource path="res://otherRes/UI/Theme/Theme.tres" type="Theme" id=8]
 [ext_resource path="res://otherRes/UI/9Patch.svg" type="Texture" id=9]
+
+[sub_resource type="Animation" id=7]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/statisticButton:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 1219 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/infinityButton:rect_position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -900, 0 ) ]
+}
 
 [sub_resource type="Gradient" id=1]
 colors = PoolColorArray( 1, 0.752941, 0, 1, 1, 0.258824, 0, 1 )
@@ -56,6 +83,7 @@ __meta__ = {
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 "anims/Menu Animation" = ExtResource( 5 )
+anims/RESET = SubResource( 7 )
 
 [node name="Bacground" type="ReferenceRect" parent="."]
 self_modulate = Color( 1, 1, 1, 0 )
@@ -69,17 +97,19 @@ __meta__ = {
 margin_left = 204.543
 margin_top = 1260.56
 margin_right = 1204.54
-margin_bottom = 2260.59
-rect_scale = Vector2( 0.5, 0.5 )
+margin_bottom = 2796.56
+rect_rotation = 31.0
+rect_scale = Vector2( 0.3, 0.3 )
 texture = ExtResource( 2 )
+expand = true
+stretch_mode = 4
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Fire" type="Particles2D" parent="Bacground/Astéroid"]
 show_behind_parent = true
-position = Vector2( 387.112, 702.592 )
-rotation = 0.541052
+position = Vector2( 525.546, 1042.39 )
 scale = Vector2( 0.3, 0.3 )
 amount = 1500
 lifetime = 0.5
@@ -133,9 +163,9 @@ custom_constants/separation = 40
 alignment = 1
 
 [node name="Title" type="Label" parent="MarginContainer/VBoxContainer"]
-margin_top = 679.0
+margin_top = 623.0
 margin_right = 689.0
-margin_bottom = 994.0
+margin_bottom = 938.0
 size_flags_horizontal = 2
 size_flags_vertical = 1
 custom_fonts/font = SubResource( 6 )
@@ -143,22 +173,46 @@ text = "The Planet
      Shooter"
 valign = 3
 
-[node name="infinityButton" type="Button" parent="MarginContainer/VBoxContainer"]
-margin_top = 1034.0
-margin_right = 411.0
-margin_bottom = 1117.0
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer"]
+margin_top = 978.0
+margin_right = 451.0
+margin_bottom = 1297.0
 size_flags_horizontal = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/MarginContainer"]
+margin_right = 451.0
+margin_bottom = 319.0
+size_flags_horizontal = 3
+custom_constants/separation = 35
+
+[node name="infinityButton" type="Button" parent="MarginContainer/VBoxContainer/MarginContainer/VBoxContainer"]
+margin_left = -900.0
+margin_right = -449.0
+margin_bottom = 83.0
+size_flags_horizontal = 3
 theme = ExtResource( 8 )
 text = "Infinity Mode"
 align = 0
 
-[node name="customButton" type="Button" parent="MarginContainer/VBoxContainer"]
-margin_top = 1157.0
-margin_right = 312.0
-margin_bottom = 1240.0
-size_flags_horizontal = 2
+[node name="customButton" type="Button" parent="MarginContainer/VBoxContainer/MarginContainer/VBoxContainer"]
+margin_top = 118.0
+margin_right = 451.0
+margin_bottom = 201.0
+size_flags_horizontal = 3
 theme = ExtResource( 8 )
 text = "Customize"
+align = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="statisticButton" type="Button" parent="MarginContainer/VBoxContainer/MarginContainer/VBoxContainer"]
+margin_top = 1219.0
+margin_right = 451.0
+margin_bottom = 1302.0
+size_flags_horizontal = 3
+theme = ExtResource( 8 )
+text = "Statistics"
 align = 0
 __meta__ = {
 "_edit_use_anchors_": false
@@ -245,6 +299,83 @@ margin_bottom = 1215.0
 theme = ExtResource( 8 )
 text = "Validé"
 
-[connection signal="pressed" from="MarginContainer/VBoxContainer/infinityButton" to="." method="_on_infinityButton_pressed"]
-[connection signal="pressed" from="MarginContainer/VBoxContainer/customButton" to="." method="_on_customButton_pressed"]
+[node name="StatsContainer" type="NinePatchRect" parent="."]
+visible = false
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -448.5
+margin_top = -682.5
+margin_right = 448.5
+margin_bottom = 682.5
+texture = ExtResource( 9 )
+patch_margin_left = 80
+patch_margin_top = 80
+patch_margin_right = 80
+patch_margin_bottom = 80
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="StatsContainer"]
+margin_top = -7.0
+margin_right = 442.0
+margin_bottom = 63.0
+theme = ExtResource( 8 )
+text = "Statistics"
+
+[node name="MarginContainer" type="MarginContainer" parent="StatsContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 60.0
+margin_top = 90.0
+margin_right = -60.0
+margin_bottom = -60.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="StatsContainer/MarginContainer"]
+margin_right = 777.0
+margin_bottom = 1215.0
+
+[node name="Panel" type="Panel" parent="StatsContainer/MarginContainer/VBoxContainer"]
+margin_right = 777.0
+margin_bottom = 1128.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource( 8 )
+
+[node name="ScrollContainer" type="ScrollContainer" parent="StatsContainer/MarginContainer/VBoxContainer/Panel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 30.0
+margin_top = 30.0
+margin_right = -30.0
+margin_bottom = -30.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+follow_focus = true
+scroll_horizontal_enabled = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="StatsContainer/MarginContainer/VBoxContainer/Panel/ScrollContainer"]
+margin_right = 717.0
+size_flags_horizontal = 3
+custom_constants/separation = 40
+
+[node name="okButton" type="Button" parent="StatsContainer/MarginContainer/VBoxContainer"]
+margin_top = 1132.0
+margin_right = 777.0
+margin_bottom = 1215.0
+theme = ExtResource( 8 )
+text = "Validé"
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/infinityButton" to="." method="_on_infinityButton_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/customButton" to="." method="_on_customButton_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/statisticButton" to="." method="_on_statisticButton_pressed"]
 [connection signal="pressed" from="CustomisationContainer/MarginContainer/VBoxContainer/okButton" to="." method="_on_okButton_pressed"]
+[connection signal="pressed" from="StatsContainer/MarginContainer/VBoxContainer/okButton" to="." method="_on_okStatsButton_pressed"]

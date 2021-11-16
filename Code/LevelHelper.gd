@@ -29,6 +29,7 @@ func _ready():
 		
 	GameHelper.connect("win", self, "win_lvl")
 	GameHelper.connect("nextLevel", self, "nextLevel")
+	GameHelper.connect("replayLevel", self, "replayLevel")
 	GameHelper.connect("play", self, "play")
 
 func clear_lvl():
@@ -73,6 +74,11 @@ func nextLevel():
 	if(SceneParameters.Level_Type == SceneParameters.LevelTypeEnum.Infinity):
 		clear_lvl()
 		buildRandomLevel()
+
+func replayLevel():
+	if(SceneParameters.Level_Type == SceneParameters.LevelTypeEnum.Infinity):
+		GameHelper.nb_ball_launched = 0;
+		GameHelper.score = 0;
 		
 		
 func play():

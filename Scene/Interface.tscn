@@ -128,8 +128,8 @@ margin_right = 780.0
 margin_bottom = 473.0
 size_flags_horizontal = 3
 size_flags_vertical = 7
-custom_fonts/font = SubResource( 1 )
 custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 1 )
 text = "0
 "
 align = 1
@@ -140,9 +140,19 @@ margin_top = 477.0
 margin_right = 780.0
 margin_bottom = 560.0
 grow_vertical = 0
+custom_constants/separation = 30
 alignment = 1
 
+[node name="replayButton" type="Button" parent="TopLayer/ResumeContainer/MarginContainer/VBoxContainer/HBoxContainer"]
+margin_right = 375.0
+margin_bottom = 83.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource( 4 )
+text = "Replay"
+
 [node name="nextButton" type="Button" parent="TopLayer/ResumeContainer/MarginContainer/VBoxContainer/HBoxContainer"]
+margin_left = 405.0
 margin_right = 780.0
 margin_bottom = 83.0
 size_flags_horizontal = 3
@@ -177,8 +187,8 @@ margin_left = 420.0
 margin_top = 114.0
 margin_right = 614.0
 margin_bottom = 169.0
-custom_fonts/font = ExtResource( 1 )
 custom_colors/font_color = Color( 1, 1, 1, 0.745098 )
+custom_fonts/font = ExtResource( 1 )
 text = "Stage: "
 align = 1
 valign = 1
@@ -188,8 +198,8 @@ margin_left = 618.0
 margin_top = 114.0
 margin_right = 659.0
 margin_bottom = 169.0
-custom_fonts/font = ExtResource( 1 )
 custom_colors/font_color = Color( 1, 1, 1, 0.745098 )
+custom_fonts/font = ExtResource( 1 )
 text = "0"
 align = 1
 valign = 1
@@ -197,4 +207,5 @@ valign = 1
 [connection signal="pressed" from="TopLayer/GridContainer/skipButton" to="." method="_on_skipButton_pressed"]
 [connection signal="pressed" from="TopLayer/GridContainer/closeButton" to="." method="_on_skipButton_pressed"]
 [connection signal="pressed" from="TopLayer/GridContainer/closeButton" to="." method="_on_closeButton_pressed"]
+[connection signal="pressed" from="TopLayer/ResumeContainer/MarginContainer/VBoxContainer/HBoxContainer/replayButton" to="." method="_on_replay_Button_pressed"]
 [connection signal="pressed" from="TopLayer/ResumeContainer/MarginContainer/VBoxContainer/HBoxContainer/nextButton" to="." method="_on_next_Button_pressed"]

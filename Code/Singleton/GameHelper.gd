@@ -2,6 +2,7 @@ extends Node
 
 signal win
 signal nextLevel
+signal replayLevel
 signal close
 
 signal play
@@ -26,6 +27,9 @@ func win():
 func nextLevel():
 	nb_ball_launched = 0
 	emit_signal("nextLevel")
+	
+func replayLevel():
+	emit_signal("replayLevel")
 
 
 func play():

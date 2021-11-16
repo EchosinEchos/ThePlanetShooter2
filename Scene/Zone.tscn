@@ -81,7 +81,7 @@ material = SubResource( 3 )
 margin_top = 1770.0
 margin_right = 1080.0
 margin_bottom = 1920.0
-color = Color( 1.2, 0.12, 0, 1 )
+color = Color( 1.29412, 0.121569, 0, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
