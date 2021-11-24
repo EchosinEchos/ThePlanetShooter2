@@ -6,3 +6,5 @@ Made with godot
 
 Created by Thibault PENNING
 Idea by my friends
+
+License : CeCILL-B
