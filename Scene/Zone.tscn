@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Code/Zone.gd" type="Script" id=1]
 [ext_resource path="res://otherRes/endZone.shader" type="Shader" id=2]
@@ -55,6 +55,12 @@ angle = 720.0
 angle_random = 1.0
 scale = 0.3
 scale_random = 1.0
+
+[sub_resource type="Environment" id=8]
+background_mode = 4
+glow_enabled = true
+glow_blend_mode = 0
+adjustment_enabled = true
 
 [node name="Zone" type="Control"]
 anchor_right = 1.0
@@ -123,3 +129,6 @@ z_index = 1
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="Ball_Sprite"]
 remote_path = NodePath("../../Fire")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource( 8 )

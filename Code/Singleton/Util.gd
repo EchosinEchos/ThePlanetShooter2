@@ -1,5 +1,13 @@
 extends Node
 
+var rng : RandomNumberGenerator = RandomNumberGenerator.new()
+
+var height:int = ProjectSettings.get_setting("display/window/size/height")
+var width:int = ProjectSettings.get_setting("display/window/size/width")
+
+func _init():
+	rng.randomize()	
+
 func loadTexture(path, exclude_extension = []):
 	var arrayTexture:Array
 	var cDir:Directory = Directory.new()

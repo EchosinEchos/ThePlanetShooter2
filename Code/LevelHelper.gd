@@ -9,8 +9,6 @@ export(int, 1, 4) var difficulty:int = 2
 var objectif_scene:PackedScene = preload("res://Scene/Objectif.tscn")
 var planete_scene:PackedScene = preload("res://Scene/Planete.tscn")
 
-var rng : RandomNumberGenerator = RandomNumberGenerator.new()
-
 var height:int = ProjectSettings.get_setting("display/window/size/height")
 var width:int = ProjectSettings.get_setting("display/window/size/width")
 
@@ -21,7 +19,6 @@ var tree_node:Node
 var planeteTexture:Array
 
 func _ready():
-	rng.randomize()	
 	c_tree = get_tree()
 	tree_node = c_tree.get_root()
 	planeteTexture = Util.loadTexture("res://Image/Planete/")
@@ -42,17 +39,17 @@ func buildRandomLevel():
 	copyTexture.shuffle()
 	
 	var n_obj : StaticBody2D = objectif_scene.instance()
-	n_obj.position = Vector2(rng.randi_range(100, width-100), 150)
+	n_obj.position = Vector2(Util.rng.randi_range(100, width-100), 150)
 	n_obj.radius = 100
 	self.call_deferred("add_child", n_obj)
 	
 	var yoff:int = 250
-	for i in range(1, rng.randi_range(1, difficulty)+1):
+	for i in range(1, Util.rng.randi_range(1, difficulty)+1):
 		var n_plan:gravity_attractor = planete_scene.instance()
-		var n_rad: int = rng.randi_range(50, difficulty*75)
-		yoff += n_rad/2 + rng.randi_range(50,200)
+		var n_rad: int = Util.rng.randi_range(50, difficulty*75)
+		yoff += n_rad/2 + Util.rng.randi_range(50,200)
 		n_plan.radius = n_rad/2
-		n_plan.position = Vector2(rng.randi_range(n_rad/2, width-n_rad/2), yoff)
+		n_plan.position = Vector2(Util.rng.randi_range(n_rad/2, width-n_rad/2), yoff)
 		n_plan.mass = n_rad * n_rad * 0.5 / 4
 		
 		if copyTexture.size() <1:

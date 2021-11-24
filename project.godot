@@ -28,12 +28,18 @@ _global_script_classes=[ {
 "class": "gravity_attractor",
 "language": "GDScript",
 "path": "res://Code/gravity_attractor.gd"
+}, {
+"base": "Button",
+"class": "soundButton",
+"language": "GDScript",
+"path": "res://Code/UI/soundButton.gd"
 } ]
 _global_script_class_icons={
 "GitAPI": "",
 "LevelHelper": "res://Useless/wrench.svg",
 "gravity_attracted": "",
-"gravity_attractor": ""
+"gravity_attractor": "",
+"soundButton": ""
 }
 
 [application]
@@ -47,6 +53,7 @@ config/icon="res://Image/Icon.png"
 [autoload]
 
 Util="*res://Code/Singleton/Util.gd"
+SoundManager="*res://Code/Singleton/SoundManager.gd"
 GameHelper="*res://Code/Singleton/GameHelper.gd"
 PlayerParameters="*res://Code/Singleton/PlayerParameters.gd"
 SceneParameters="*res://Code/Singleton/SceneParameters.gd"

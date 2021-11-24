@@ -1,0 +1,234 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://otherRes/UI/Theme/Theme.tres" type="Theme" id=1]
+[ext_resource path="res://otherRes/UI/Alien.svg" type="Texture" id=2]
+[ext_resource path="res://otherRes/UI/Hand.png" type="Texture" id=3]
+[ext_resource path="res://Scene/Objectif.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scene/Zone.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Code/Intro.gd" type="Script" id=6]
+
+[sub_resource type="Animation" id=1]
+resource_name = "DragnDrop"
+length = 8.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("2/TextureRect:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.001, 1.5, 2.5, 2.7, 4.4, 5.3, 7, 8 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 260, 1070 ), Vector2( 260, 1070 ), Vector2( 260, 1070 ), Vector2( 112.002, 1413.09 ), Vector2( 112.002, 1413.09 ), Vector2( 61.5483, 1776.35 ), Vector2( 61.5483, 1776.35 ), Vector2( 61.5483, 1776.35 ), Vector2( 260, 1070 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("2/TextureRect:rect_rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1.5, 2.5, 2.7, 4.6, 5.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 35.0, 35.0, 35.0, 40.0, 40.0, 35.0 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("2/TextureRect:rect_scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 1.5, 2.5, 2.7, 5.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ Vector2( 0.7, 0.7 ), Vector2( 0.7, 0.7 ), Vector2( 0.7, 0.7 ), Vector2( 0.6, 0.6 ), Vector2( 0.7, 0.7 ) ]
+}
+
+[sub_resource type="Animation" id=2]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("2/TextureRect:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 262.36, 1066.26 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("2/TextureRect:rect_rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 35.0 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("2/TextureRect:rect_scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0.7, 0.7 ) ]
+}
+
+[node name="Node2D" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Objectif" parent="." instance=ExtResource( 4 )]
+position = Vector2( 540, 200 )
+
+[node name="Zone" parent="." instance=ExtResource( 5 )]
+
+[node name="tutoRoot" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_default_cursor_shape = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="tutoRoot"]
+anims/DragnDrop = SubResource( 1 )
+anims/RESET = SubResource( 2 )
+
+[node name="Tween" type="Tween" parent="tutoRoot"]
+
+[node name="TextureRect" type="TextureRect" parent="tutoRoot"]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -680.0
+margin_top = -853.0
+margin_right = 320.0
+margin_bottom = 147.0
+grow_horizontal = 0
+grow_vertical = 0
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="tutoRoot"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color( 0.384314, 0.384314, 0.384314, 0.211765 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="1" type="Control" parent="tutoRoot"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="tutoRoot/1"]
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = 40.0
+margin_top = -205.0
+margin_right = -40.0
+margin_bottom = 205.5
+theme = ExtResource( 1 )
+text = "Terrians are an error, we need to destroy them !
+
+
+Thanks  to our SUP3RGravityL4ser2000® we could throw object to earth!"
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="2" type="Control" parent="tutoRoot"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="tutoRoot/2"]
+anchor_right = 1.0
+margin_left = 40.0
+margin_top = 300.0
+margin_right = -40.0
+margin_bottom = 527.0
+size_flags_horizontal = 3
+theme = ExtResource( 1 )
+text = "Start by pressing with your finger on our zone of action (THE GREY ZONE) and drag the object into the sun (THE RED ZONE) to give the object his velocity. 
+
+When you are ready, release your deadly projectile by removing your finger from the screen."
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="tutoRoot/2"]
+margin_left = 262.36
+margin_top = 1066.26
+margin_right = 812.36
+margin_bottom = 1787.26
+rect_rotation = 35.0
+rect_scale = Vector2( 0.7, 0.7 )
+rect_pivot_offset = Vector2( 225, 60 )
+texture = ExtResource( 3 )
+stretch_mode = 6
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="3" type="Control" parent="tutoRoot"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="tutoRoot/3"]
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = 40.0
+margin_top = -205.0
+margin_right = -40.0
+margin_bottom = 205.5
+theme = ExtResource( 1 )
+text = "Well Done !
+
+But there is  more to do !
+We wiil stop when all terrian will be dead"
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="gui_input" from="tutoRoot/1" to="." method="_on_1_gui_input"]
+[connection signal="gui_input" from="tutoRoot/2" to="." method="_on_2_gui_input"]
+[connection signal="gui_input" from="tutoRoot/3" to="." method="_on_3_gui_input"]

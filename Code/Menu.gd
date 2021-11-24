@@ -1,11 +1,18 @@
 extends Control
 
 var gameScene:PackedScene = preload("res://Scene/Monde.tscn")
+var introScene:PackedScene = preload("res://Scene/Intro.tscn")
 var ballButton:PackedScene = preload("res://otherRes/UI/Scene/ballCustomisationButton.tscn")
 
 var listOfTexture:Array
 
+
 func _ready():
+	
+	if PlayerParameters.newPlayer:
+		get_tree().change_scene_to(introScene)
+		
+		
 	PlayerParameters.connect("ballTextureChanged",self, "ballTextureChanged")
 	
 	if !OS.is_debug_build():

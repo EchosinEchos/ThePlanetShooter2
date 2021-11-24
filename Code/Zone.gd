@@ -1,21 +1,20 @@
 tool
 extends Control
 
-var height:int = ProjectSettings.get_setting("display/window/size/height")
-var width:int = ProjectSettings.get_setting("display/window/size/width")
-
 var alreadyPressed:bool = false
 var startPos:Vector2 = Vector2.ZERO
 
 const ball_scene = preload("res://Scene/Ball.tscn")
 
+var starPos:PoolVector2Array = PoolVector2Array()
+
 
 
 func sizeChanged():
-	$startRect.rect_position = Vector2(0, height - SceneParameters.startSize - SceneParameters.endSize)
-	$startRect.rect_size = Vector2(width, SceneParameters.startSize + SceneParameters.endSize)
-	$endRect.rect_position = Vector2(0, height - SceneParameters.endSize)
-	$endRect.rect_size = Vector2(width, SceneParameters.endSize)
+	$startRect.rect_position = Vector2(0, Util.height - SceneParameters.startSize - SceneParameters.endSize)
+	$startRect.rect_size = Vector2(Util.width, SceneParameters.startSize + SceneParameters.endSize)
+	$endRect.rect_position = Vector2(0, Util.height - SceneParameters.endSize)
+	$endRect.rect_size = Vector2(Util.width, SceneParameters.endSize)
 	pass
 
 		
@@ -24,9 +23,19 @@ func _ready():
 	$Ball_Sprite.texture = PlayerParameters.ball_texture
 	
 	SceneParameters.connect("sizeChanged", self, "sizeChanged")
+	genStar()
+	
+	
+func _process(delta):
+	update()
 		
 		
 func _draw():
+	
+	for p in starPos:
+		draw_circle(p, 5, Color.white * abs(sin((OS.get_ticks_msec()+p.x + p.y* 10)/1000.0)))
+		
+	
 	if alreadyPressed:
 		draw_circle(startPos, 12, Color.white)
 		#draw_circle(get_viewport().get_mouse_position(), 32, Color.white)
@@ -40,7 +49,7 @@ func _input(event):
 	if event is InputEventMouseButton:
 		if event.button_index == BUTTON_LEFT :
 			if event.pressed :
-				if event.position.y > height - SceneParameters.endSize - SceneParameters.startSize:
+				if event.position.y > Util.height - SceneParameters.endSize - SceneParameters.startSize:
 					alreadyPressed = true
 					startPos = event.position
 					$Ball_Sprite.visible = true
@@ -50,7 +59,7 @@ func _input(event):
 				if alreadyPressed:
 					update()
 					alreadyPressed = false
-					if event.position.y > height - SceneParameters.endSize and event.position.y < height and event.position != startPos:
+					if event.position.y > Util.height - SceneParameters.endSize and event.position.y < Util.height and event.position != startPos:
 						var nw_ball = ball_scene.instance()
 						
 						nw_ball.position = event.position
@@ -67,4 +76,11 @@ func _input(event):
 			update()
 			$Ball_Sprite.position = event.position
 			$Ball_Sprite.rotation = atan2(startPos.x - event.position.x, -startPos.y + event.position.y)
-			$Fire.emitting = (event.position.y > height - SceneParameters.endSize)
+			$Fire.emitting = (event.position.y > Util.height - SceneParameters.endSize)
+
+
+
+func genStar():
+	starPos.resize(0)
+	for i in  range(Util.rng.randi_range(10, 15)):
+		starPos.append(Vector2(Util.rng.randi_range(0,Util.width), Util.rng.randi_range(0, Util.height-SceneParameters.startSize - SceneParameters.endSize)))

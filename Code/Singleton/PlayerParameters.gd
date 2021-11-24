@@ -12,6 +12,8 @@ var ball_texture:Texture
 var maxStage:int =  0
 var highScore:int = 0
 
+var newPlayer:bool = true
+
 func _ready():
 	var arr = Util.loadTexture("res://Image/Ball/", ["svg"])
 	ball_texture = arr[1]
@@ -39,6 +41,10 @@ func readVar():
 			highScore = saveDict.get("highScore")
 		if saveDict.has("maxStage"):
 			maxStage = saveDict.get("maxStage")
+		if saveDict.has("newPlayer"):
+			pass
+			#newPlayer = saveDict.get("newPlayer")
+			
 			
 
 	ball_texture = load(ballTexturePath)
@@ -51,6 +57,7 @@ func saveVar():
 		"ballTexturePath" : ballTexturePath,
 		"highScore" : highScore,
 		"maxStage" : maxStage,
+		"newPlayer" : newPlayer,
 	}
 	
 	paramFile.store_line(to_json(saveDic))
