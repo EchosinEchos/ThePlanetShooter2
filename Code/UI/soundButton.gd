@@ -6,7 +6,8 @@ export(AudioStream) var audio:AudioStream
 
 func _enter_tree():
 	connect("pressed", self, "click")
+	connect("toggled", self, "click")
 
 
 func click():
-	pass
+	SoundManager.play_click()

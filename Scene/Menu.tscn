@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://Image/Terre.png" type="Texture" id=1]
 [ext_resource path="res://Image/Ball/Eagle.png" type="Texture" id=2]
@@ -10,6 +10,7 @@
 [ext_resource path="res://otherRes/UI/Theme/Theme.tres" type="Theme" id=8]
 [ext_resource path="res://otherRes/UI/9Patch.svg" type="Texture" id=9]
 [ext_resource path="res://Code/UI/soundButton.gd" type="Script" id=10]
+[ext_resource path="res://Code/UI/soundButton.gd" type="Script" id=11]
 
 [sub_resource type="Animation" id=7]
 length = 0.001
@@ -204,9 +205,7 @@ size_flags_horizontal = 3
 theme = ExtResource( 8 )
 text = "Customize"
 align = 0
-__meta__ = {
-"_edit_use_anchors_": false
-}
+script = ExtResource( 11 )
 
 [node name="statisticButton" type="Button" parent="MarginContainer/VBoxContainer/MarginContainer/VBoxContainer"]
 margin_top = 1219.0
@@ -216,9 +215,7 @@ size_flags_horizontal = 3
 theme = ExtResource( 8 )
 text = "Statistics"
 align = 0
-__meta__ = {
-"_edit_use_anchors_": false
-}
+script = ExtResource( 11 )
 
 [node name="CustomisationContainer" type="NinePatchRect" parent="."]
 visible = false
@@ -300,6 +297,7 @@ margin_right = 777.0
 margin_bottom = 1215.0
 theme = ExtResource( 8 )
 text = "Validé"
+script = ExtResource( 11 )
 
 [node name="StatsContainer" type="NinePatchRect" parent="."]
 visible = false
@@ -375,6 +373,7 @@ margin_right = 777.0
 margin_bottom = 1215.0
 theme = ExtResource( 8 )
 text = "Validé"
+script = ExtResource( 11 )
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/infinityButton" to="." method="_on_infinityButton_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/customButton" to="." method="_on_customButton_pressed"]

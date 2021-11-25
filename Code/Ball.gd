@@ -27,6 +27,7 @@ func _physics_process(delta):
 		
 		if "goal" in gr:
 			queue_free()
+			SoundManager.play_boom()
 			GameHelper.score = score/sqrt(GameHelper.nb_ball_launched)
 			GameHelper.win()
 			

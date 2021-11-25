@@ -53,7 +53,7 @@ config/icon="res://Image/Icon.png"
 [autoload]
 
 Util="*res://Code/Singleton/Util.gd"
-SoundManager="*res://Code/Singleton/SoundManager.gd"
+SoundManager="*res://Code/Singleton/SoundManager.tscn"
 GameHelper="*res://Code/Singleton/GameHelper.gd"
 PlayerParameters="*res://Code/Singleton/PlayerParameters.gd"
 SceneParameters="*res://Code/Singleton/SceneParameters.gd"

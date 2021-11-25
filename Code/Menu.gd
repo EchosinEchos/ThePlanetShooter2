@@ -17,7 +17,7 @@ func _ready():
 	
 	if !OS.is_debug_build():
 		$AnimationPlayer.play("Menu Animation")
-	listOfTexture = Util.listTexture("res://Image/Ball/", ["svg"])
+	listOfTexture = Util.listRessource("res://Image/Ball/", ["svg"])
 	addButton_to_Grid()
 	
 	$"Bacground/Astéroid".texture = PlayerParameters.ball_texture

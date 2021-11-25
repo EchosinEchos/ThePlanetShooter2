@@ -12,7 +12,7 @@ func _ready():
 	change_size()
 	
 	if $Sprite.texture == null:
-		var planeteTexture:Array = Util.loadTexture("res://Image/Planete/")
+		var planeteTexture:Array = Util.loadRessource("res://Image/Planete/")
 		$Sprite.texture = planeteTexture[randi()%planeteTexture.size()]
 
 

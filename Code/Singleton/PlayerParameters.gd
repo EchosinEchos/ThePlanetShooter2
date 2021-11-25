@@ -15,7 +15,7 @@ var highScore:int = 0
 var newPlayer:bool = true
 
 func _ready():
-	var arr = Util.loadTexture("res://Image/Ball/", ["svg"])
+	var arr = Util.loadRessource("res://Image/Ball/", ["svg"])
 	ball_texture = arr[1]
 	
 	readVar()
@@ -42,8 +42,7 @@ func readVar():
 		if saveDict.has("maxStage"):
 			maxStage = saveDict.get("maxStage")
 		if saveDict.has("newPlayer"):
-			pass
-			#newPlayer = saveDict.get("newPlayer")
+			newPlayer = saveDict.get("newPlayer")
 			
 			
 

@@ -21,7 +21,7 @@ var planeteTexture:Array
 func _ready():
 	c_tree = get_tree()
 	tree_node = c_tree.get_root()
-	planeteTexture = Util.loadTexture("res://Image/Planete/")
+	planeteTexture = Util.loadRessource("res://Image/Planete/")
 		
 		
 	GameHelper.connect("win", self, "win_lvl")
